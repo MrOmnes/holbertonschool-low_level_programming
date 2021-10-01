@@ -25,11 +25,11 @@ int main(void)
 					putchar(',');
 					putchar(' ');
 				}
-				d;
+				d++;
 			}
-			b;
+			b++;
 		}
-		c;
+		c++;
 	}
 
 	putchar('\n');
