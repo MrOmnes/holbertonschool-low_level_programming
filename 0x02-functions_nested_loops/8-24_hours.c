@@ -2,8 +2,6 @@
 
 /**
  * jack_bauer - Clock
- * @h: Hours
- * @m: Minutes
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
