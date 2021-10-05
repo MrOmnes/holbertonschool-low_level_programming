@@ -2,7 +2,7 @@
 
 /**
  * print_sign - writes the character c to stdout
- * @c: Value to check
+ * @n: Value to check
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
@@ -25,5 +25,5 @@ int print_sign(int n)
 	}
 
 	return (0);
-	
+
 }
