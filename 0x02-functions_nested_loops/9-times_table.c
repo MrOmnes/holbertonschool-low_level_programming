@@ -2,8 +2,6 @@
 
 /**
  * print_number - Print table with putchar of ten and unit
- * @ten: Affiche le chiffre des dizaines
- * @unit: Affiche le chiffre des unités
  * @column: Valeur de la colone
  * @number: Résultat de la fonction times_table
 */
@@ -20,9 +18,6 @@ void print_number(int number, int column)
 
 /**
  * times_table - Print * tables
- * @row: Valeur de la ligne
- * @column: Valeur de la colone
- * @result: Valeur de la ligne * Valeur de la colone
  */
 void times_table(void)
 {
