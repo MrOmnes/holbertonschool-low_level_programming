@@ -13,7 +13,7 @@ void print_number(int number, int column)
 
 	if (ten == 0 && column != 0)
 		_putchar(' ');
-	else
+	else if (ten != 0)
 		_putchar(ten + 48);
 	_putchar(unit + 48);
 }
