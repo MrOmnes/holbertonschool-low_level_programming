@@ -27,6 +27,7 @@ void times_table(void)
 			}
 			else
 			{
+			_putchar(' ');
 			_putchar((r % 10) + 48);
 			_putchar(',');
 			_putchar(' ');
@@ -47,6 +48,7 @@ void times_table(void)
 			}
 			else
 			{
+			_putchar(' ');
 			_putchar((r % 10) + 48);
 			_putchar('\n');
 			x++;
