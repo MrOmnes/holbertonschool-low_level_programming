@@ -1,0 +1,59 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "8. 24 hours",
+			"command": "/usr/bin/gcc",
+			"args": [
+				"-Wall",
+				"-pedantic",
+				"-Werror",
+				"-Wextra",
+				"-std=gnu89",
+				"_putchar.c",
+				"8-main.c",
+				"8-24_hours.c",
+				"-o",
+				"8-24"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"type": "cppbuild",
+			"label": "9. times table",
+			"command": "/usr/bin/gcc",
+			"args": [
+				"-Wall",
+				"-pedantic",
+				"-Werror",
+				"-Wextra",
+				"-std=gnu89",
+				"_putchar.c",
+				"9-main.c",
+				"9-times_table.c",
+				"-o",
+				"9-times_table"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}

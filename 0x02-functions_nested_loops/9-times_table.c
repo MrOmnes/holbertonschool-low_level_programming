@@ -6,53 +6,34 @@
  * On error, -1 is returned, and errno is set appropriately.
  */
 
+void print_number(int number)
+{
+	int ten = number / 10, unit = number % 10;
+
+	if (ten == 0)
+		_putchar(' ');
+	else
+		_putchar(ten + 48);
+	_putchar(unit + 48);
+}
+
+
 void times_table(void)
 {
-	int x = 0, d = 0;
+	int row, column, result;
 
-	while (x <= 9)
+	for (row = 0; row < 10; row++)
 	{
-		while (d < 9)
+		for (column = 0; column < 10; column++)
 		{
-			int r = (x * d);
-
-			if (r / 10 != 0)
+			result = row * column;
+			print_number(result);
+			if (column != 9)
 			{
-				_putchar((r / 10) + 48);
-				_putchar((r % 10) + 48);
 				_putchar(',');
 				_putchar(' ');
-				d++;
-			}
-			else
-			{
-			_putchar(' ');
-			_putchar((r % 10) + 48);
-			_putchar(',');
-			_putchar(' ');
-			d++;
 			}
 		}
-		while (d == 9)
-		{
-			int r = (x * d);
-
-			if (r / 10 != 0)
-			{
-				_putchar((r / 10) + 48);
-				_putchar((r % 10) + 48);
-				_putchar('\n');
-				x++;
-				d = 0;
-			}
-			else
-			{
-			_putchar(' ');
-			_putchar((r % 10) + 48);
-			_putchar('\n');
-			x++;
-			d = 0;
-			}
-		}
+		_putchar('\n');
 	}
 }
