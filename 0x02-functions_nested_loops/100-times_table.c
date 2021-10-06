@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 /**
- * times_table - Print * tables
+ * pritn_times_table - Print * tables
+ * @n: Number Multiplicater
  */
 
 void print_times_table(int n)
@@ -23,7 +24,7 @@ void print_times_table(int n)
 					printf("%d", result);
 
 				else if (row == 0 && column > 0)
-					printf("  0");
+					printf("   0");
 				else
 					printf("%4.d", result);
 
