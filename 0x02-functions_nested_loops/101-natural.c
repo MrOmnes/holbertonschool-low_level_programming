@@ -20,4 +20,6 @@ int main(void)
 	}
 	multiple = t + c;
 	printf("%d\n", multiple);
+
+	return (0);
 }
