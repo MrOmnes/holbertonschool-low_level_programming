@@ -29,7 +29,7 @@ void times_table(void)
 		{
 			result = row * column;
 			print_number(result, column);
-			if (column != 9)
+			if (9 != column)
 			{
 				_putchar(',');
 				_putchar(' ');
