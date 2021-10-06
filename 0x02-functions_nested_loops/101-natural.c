@@ -1,10 +1,9 @@
 #include <stdio.h>
 
-/*
-*main - Affiche les multiples de 3 et 5 et calcule la somme
-*Return: 0
+/**
+* main - Affiche les multiples de 3 et 5 et calcule la somme
+* Return: 0
 */
-
 int main(void)
 {
 	int i;
