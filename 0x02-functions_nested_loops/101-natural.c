@@ -3,9 +3,9 @@
 int main(void)
 {
 	int i;
-	int t = 0;
-	int c = 0;
-	int multiple = 0;
+	unsigned long int t = 0;
+	unsigned long int c = 0;
+	unsigned long int multiple = 0;
 
 	for ( i = 0; i < 1024; ++i)
 	{
