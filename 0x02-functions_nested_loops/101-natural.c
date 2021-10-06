@@ -9,7 +9,6 @@ int main(void)
 {
 	int i;
 	int somme = 0;
-	int multiple = 0;
 
 	for ( i = 0; i < 1024; ++i)
 	{
