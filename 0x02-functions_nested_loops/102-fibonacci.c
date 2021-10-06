@@ -13,7 +13,11 @@ int main(void)
 
 	for (i = 1; i <= 50; ++i)
 	{
-		printf("%ld, ", j);
+		if (j != 1)
+		{
+			printf(", ");
+		}
+	printf("%ld", j);
 	next = j + k;
 	j = k;
 	k = next;
