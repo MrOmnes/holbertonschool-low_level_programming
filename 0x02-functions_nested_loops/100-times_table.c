@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * pritn_times_table - Print * tables
+ * print_times_table - Print * tables
  * @n: Number Multiplicater
  */
 
