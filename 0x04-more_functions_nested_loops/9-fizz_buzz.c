@@ -14,13 +14,17 @@ int main(void)
 		{
 			printf("Fizz ");
 		}
-		if ((n % 5) == 0 && (n % 3) != 0)
+		if ((n % 5) == 0 && (n % 3) != 0 && n != 100)
 		{
 			printf("Buzz ");
 		}
 		if ((n % 5) == 0 && (n % 3) == 0)
 		{
 			printf("FizzBuzz ");
+		}
+		if (n == 100)
+		{
+			printf("Buzz");
 		}
 		else if ((n % 5) != 0 && (n % 3) != 0)
 		{
