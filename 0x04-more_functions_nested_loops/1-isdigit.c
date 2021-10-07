@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-*_isupper - Check if a number is upper or lower
+*_isdigit - Check if it's a digit or no
 *@c: Number to check
 *Return: 1 if is upper, 0 otherwise
 */
