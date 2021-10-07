@@ -8,10 +8,11 @@
 void print_square(int size)
 {
 	int cube;
+	int i = size;
 
-	if (size > 0)
+	if (i > 0)
 	{
-		while (size > 0)
+		while (i > 0)
 		{
 			cube = size;
 			while (cube > 0)
@@ -21,7 +22,7 @@ void print_square(int size)
 			}
 			_putchar('\n');
 			cube++;
-			size--;
+			i--;
 		}
 	}
 	else
