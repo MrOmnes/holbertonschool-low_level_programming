@@ -12,7 +12,7 @@ void puts2(char *str)
 	{
 		_putchar(str[c]);
 		c++;
-		if(str[c] != '\0')
+		if (str[c] != '\0')
 		{
 			c++;
 		}
