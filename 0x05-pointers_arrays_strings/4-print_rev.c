@@ -2,15 +2,15 @@
 
 /**
 * print_rev - Print a text in reverse
-*@str: Value to print
+*@s: Value to print
 */
-void print_rev(char *str)
+void print_rev(char *s)
 {
-	int c = _strlen(str);
+	int c = _strlen(s);
 
-	while (str[c] >= 0)
+	while (s[c] >= 0)
 	{
-		_putchar(str[c]);
+		_putchar(s[c]);
 		c--;
 	}
 
@@ -19,17 +19,17 @@ void print_rev(char *str)
 
 /**
 * _strlen - Print length of a string
-* @str: String to print lenght
+* @s: String to print lenght
 * Return: 0 if *s is not \0 and 1 when is it
 */
-int _strlen(char *str)
+int _strlen(char *s)
 {
-	if (*str == '\0')
+	if (*s == '\0')
 	{
 		return (0);
 	}
 	else
 	{
-		return (1 + _strlen(++str));
+		return (1 + _strlen(++s));
 	}
 }
