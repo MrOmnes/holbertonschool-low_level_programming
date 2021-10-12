@@ -12,7 +12,7 @@ int _atoi(char *s)
 	unsigned int nombre = 0;
 	unsigned int moins = 0;
 
-	while (!(s[n] >= 48 && s[n] <= 57))
+	while (!(s[n] >= 48 && s[n] <= 57) && s[n] != '\0')
 	{
 		if (s[n] == 45)
 		{
@@ -22,7 +22,7 @@ int _atoi(char *s)
 		n++;
 	}
 
-	while ((s[n] >= 48 && s[n] <= 57))
+	while ((s[n] >= 48 && s[n] <= 57 && s[n] != '\0'))
 	{
 		nombre = (nombre * 10) + (s[n] - 48);
 		n++;
