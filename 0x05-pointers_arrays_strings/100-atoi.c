@@ -8,9 +8,9 @@
 */
 int _atoi(char *s)
 {
-	long int n = 0;
-	long int nombre = 0;
-	long int moins = 0;
+	unsigned int n = 0;
+	unsigned int nombre = 0;
+	unsigned int moins = 0;
 
 	while (!(s[n] >= 48 && s[n] <= 57))
 	{
