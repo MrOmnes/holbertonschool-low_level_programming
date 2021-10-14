@@ -1,6 +1,13 @@
 #include "main.h"
 #include <stdio.h>
 
+/**
+* _strncat - Concatenate Two Strings
+* @dest: String 1
+* @src: String 2
+* @n: Size of the string
+* Return: dest
+*/
 char *_strncat(char *dest, char *src, int n)
 {
 	int c = 0, d = 0;
