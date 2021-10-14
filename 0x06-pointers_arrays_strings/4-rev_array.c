@@ -1,16 +1,15 @@
-#include "main.h"
-#include <stdio.h>
-
 void reverse_array(int *a, int n)
 {
-	while (a[n] != '\0')
+	long int str[n];
+	int i = 0;
+
+	for (i = 0; i < n; i++)
 	{
-		n++;
+		str[n - 1 - i] = a[i];
 	}
 
-	while (n != 0)
+	for (i = 0; i < n; i++)
 	{
-		*a = a[n];
-		n--;
+		a[i] = str[i];
 	}
 }
