@@ -7,20 +7,19 @@
 * @accept: String 2
 * Return: Length
 */
-
 unsigned int _strspn(char *s, char *accept)
 {
 	int i, j;
 
-	for (i = 0; accept[i]; i++)
+	for (i = 0; s[i]; i++)
 	{
-		for (j = 0; s[j]; j++)
+		for (j = 0; accept[j]; j++)
 		{
-			if (s[j] == accept[i])
+			if (s[i] == accept[j])
 				break;
 		}
-		if (!s[j])
+		if (!accept[j])
 			break;
 	}
-	return (i + 1);
+	return (i);
 }
