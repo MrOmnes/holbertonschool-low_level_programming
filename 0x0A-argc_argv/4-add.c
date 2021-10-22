@@ -9,13 +9,13 @@
 */
 int main(int argc, char *argv[])
 {
-	int i;
-	int j = 0;
-
 	if (argc > 1)
 	{
+		int i;
+
 		for (i = 1; i < argc; i++)
 		{
+			int j = 0;
 			int s = s + atoi(argv[i]);
 
 			while (argv[i][j] <= 48 || argv[i][j] >= 57)
