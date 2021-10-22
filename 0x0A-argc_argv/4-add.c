@@ -18,11 +18,16 @@ int main(int argc, char *argv[])
 			int j = 0;
 			int s = s + atoi(argv[i]);
 
-			while (argv[i][j] <= 48 || argv[i][j] >= 57)
+
+			while (argv[i][j] != '\0')
 			{
-			j++;
-			printf("Error\n");
-			return (1);
+				if (argv[i][j] < 48 || argv[i][j] > 57)
+				{
+					printf("Error\n");
+					return (1);
+				}
+
+				j++;
 			}
 
 			if (i + 1 == argc)
