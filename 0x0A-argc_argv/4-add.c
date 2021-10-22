@@ -10,6 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int i;
+	int j = 0;
 
 	if (argc != 1)
 	{
@@ -17,8 +18,9 @@ int main(int argc, char *argv[])
 		{
 			int s = s + atoi(argv[i]);
 
-			if (atoi(argv[i]) % 10 + '0' < 48 || atoi(argv[i]) % 10 + '0' > 57)
+			while (argv[i][j] <= 48 || argv[i][j] >= 57)
 			{
+			j++;
 			printf("Error\n");
 			return (1);
 			}
