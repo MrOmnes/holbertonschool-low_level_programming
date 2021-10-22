@@ -22,6 +22,6 @@ int main(int argc, char *argv[])
 		printf("%s", argv[0]);
 	}
 
-	printf("%d \n", count-1);
+	printf("%d \n", count - 1);
 	return (0);
 }
