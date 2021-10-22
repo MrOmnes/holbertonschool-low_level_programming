@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 		{
 			int s = s + atoi(argv[i]);
 
-			if (atoi(argv[i]) + '0' <= 48 || atoi(argv[i]) + '0' >= 57)
+			if (atoi(argv[i]) % 10 + '0' < 48 || atoi(argv[i]) % 10 + '0' > 57)
 			{
 			printf("Error\n");
 			return (1);
