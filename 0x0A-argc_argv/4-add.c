@@ -11,23 +11,25 @@ int main(int argc, char *argv[])
 {
 	int i;
 
-	for (i = 1; i < argc; i++)
+	if (argc != 1)
 	{
-		int s = s + atoi(argv[i]);
-
-		if (atoi(argv[i]) >= 48 && atoi(argv[i]) <= 57)
+		for (i = 1; i < argc; i++)
 		{
-		printf("Error\n");
+			int s = s + atoi(argv[i]);
+
+			if (atoi(argv[i]) + '0' <= 48 || atoi(argv[i]) + '0' >= 57)
+			{
+			printf("Error\n");
+			break;
+			}
+
+			if (i + 1 == argc)
+				printf("%d\n", s);
 		}
-
-		if (i + 1 == argc)
-			printf("%d\n", s);
-
 	}
-
-	if (argc < 1)
+	else
 	{
-		printf("0");
+		printf("0\n");
 	}
 
 	return (0);
