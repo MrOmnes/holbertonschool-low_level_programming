@@ -42,5 +42,8 @@ char *_strdup(char *str)
 		string[size] = str[size];
 	}
 
-	return (string);
+	if (string != NULL)
+		return (string);
+
+	return (NULL);
 }
