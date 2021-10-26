@@ -1,34 +1,46 @@
 #include "main.h"
 #include <stdlib.h>
 
+/**
+* _strlen - Print length of a string
+* @s: String to print lenght
+* Return: 0 if *s is not \0 and 1 when is it
+*/
+int _strlen(char *s)
+{
+	if (*s == '\0')
+	{
+		return (0);
+	}
+	else
+	{
+		return (1 + _strlen(++s));
+	}
+}
+
 
 /**
- * _strdup - Return Duplicated String
- * @str: String
- * Return: V
+ * _strdup - Duplicate a string
+ * @str: String to duplicate
+ * Return: Null or the string
 */
 char *_strdup(char *str)
 {
-	unsigned int size = 0;
-	char *v;
+	int size;
+	char *string;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 
-	v = (char *)malloc(size * sizeof(char) + 1);
+	size = _strlen(str);
+	string = (char *)malloc(sizeof(char) * size);
 
-	if (v == NULL)
+	for (size = 0; size < _strlen(str); size++)
 	{
-		return (NULL);
+		string[size] = str[size];
 	}
 
-	for (size = 0; str[size] != '\0'; size++)
-	{
-		v[size] = str[size];
-	}
-
-	return (v);
-
+	return (string);
 }
