@@ -1,69 +1,84 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-
-
 /**
-* _strlen - Print length of a string
-* @s: String to print lenght
-* Return: 0 if *s is not \0 and 1 when is it
-*/
-int _strlen(char *s)
+ * _strlen - returns the length of the string
+ * @s: the string
+ *
+ * Return: the length of the s string
+ */
+
+int		_strlen(char *s)
 {
 	int i = 0;
 
-	for (i = 0; s[i]; i++)
-		;
-
-	return(i);
+	if (s != NULL)
+		while (s[i])
+			i++;
+	return (i);
 }
 
+/**
+ * _strdup - allocates a new space in memory which contains
+ * a copy of the string given as a parameter
+ *
+ * @str: the string to duplicate
+ *
+ * Return: a pointer to the new string, or NULL if str = NULL or fail
+ */
+
+char	*_strdup(char *str)
+{
+	char	*new_str;
+	int		i = 0;
+
+	if (str == NULL)
+		return (NULL);
+	new_str = malloc(sizeof(char) * _strlen(str));
+	if (!new_str)
+		return (NULL);
+	while (str[i])
+	{
+		new_str[i] = str[i];
+		i++;
+	}
+	return (new_str);
+}
 
 /**
-* str_concat - Concatenate two string
-* @s1: String 1
-* @s2: String 2
-* Return: Null or String 1 + String 2
-*/
-char *str_concat(char *s1, char *s2)
+ * str_concat - concatenates two strings
+ *
+ * @s1: the first string
+ * @s2: the second string
+ *
+ * Return: a pointer to the new string, or NULL on failure
+ */
+
+char	*str_concat(char *s1, char *s2)
 {
-	int c = 0, d = 0;
-	int v1;
-	int v2;
-	char *dest;
+	char	*str;
+	int		i = 0, j = 0;
 
-	if (!s1 && !s2)
+	if (s1 == NULL && s2 != NULL)
+		return (_strdup(s2));
+	if (s2 == NULL && s1 != NULL)
+		return (_strdup(s1));
+	str = malloc(sizeof(char) * (_strlen(s1) + _strlen(s2) + 1));
+	if (!str)
 		return (NULL);
-
-	if (s1 == NULL)
-		v1 = 0;
-	else
-		v1 = _strlen(s1);
-
-	if (s2 == NULL)
-		v2 = 0;
-	else
-		v2 = _strlen(s2);
-
-	dest = malloc(sizeof(char) * (v1 + v2 + 1));
-
-	if (dest)
-		return (NULL);
-
-	while (c < v1)
+	if (s1 != NULL && s2 != NULL)
 	{
-		dest[c] = s1[c];
-		c++;
+		while (s1[i])
+		{
+			str[i] = s1[i];
+			i++;
+		}
+		while (s2[j])
+		{
+			str[i + j] = s2[j];
+			j++;
+		}
 	}
-
-	while (d < v2)
-	{
-		dest[v1 + d] = s2[d];
-		d++;
-	}
-
-	dest[v1 + v2] = '\0';
-
-	return (dest);
-
+	str[i + j] = '\0';
+	return (str);
 }
