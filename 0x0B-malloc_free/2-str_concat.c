@@ -10,14 +10,12 @@
 */
 int _strlen(char *s)
 {
-	if (*s == '\0')
-	{
-		return (0);
-	}
-	else
-	{
-		return (1 + _strlen(++s));
-	}
+	int i = 0;
+
+	for (i = 0; s[i]; i++)
+		;
+
+	return(i);
 }
 
 
@@ -30,26 +28,41 @@ int _strlen(char *s)
 char *str_concat(char *s1, char *s2)
 {
 	int c = 0, d = 0;
+	int v1;
+	int v2;
 	char *dest;
 
 	if (!s1 && !s2)
 		return (NULL);
 
-	dest = malloc(sizeof(char) * (_strlen(s1) + _strlen(s2) + 1));
+	if (s1 == NULL)
+		v1 = 0;
+	else
+		v1 = _strlen(s1);
 
-	while (s1[c])
+	if (s2 == NULL)
+		v2 = 0;
+	else
+		v2 = _strlen(s2);
+
+	dest = malloc(sizeof(char) * (v1 + v2 + 1));
+
+	if (dest)
+		return (NULL);
+
+	while (c < v1)
 	{
 		dest[c] = s1[c];
 		c++;
 	}
 
-	while (s2[d])
+	while (d < v2)
 	{
-		dest[c + d] = s2[d];
+		dest[v1 + d] = s2[d];
 		d++;
 	}
 
-	dest[c + d] = '\0';
+	dest[v1 + v2] = '\0';
 
 	return (dest);
 
