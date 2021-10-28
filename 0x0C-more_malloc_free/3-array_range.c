@@ -5,7 +5,7 @@
  * array_range - Create an Array of value max
  * @min: Size min of the array
  * @max: Size max of the array
- * Rerturn: Adress of the array
+ * Return: Adress of the array
 */
 int *array_range(int min, int max)
 {
