@@ -8,10 +8,8 @@
 */
 void *malloc_checked(unsigned int b)
 {
-	int *u = (int *)malloc(sizeof(unsigned int) * b);
+	int *u = malloc(b);
 	if (u == NULL)
-		exit(98);
-	if (u > __INT_MAX__)
 		exit(98);
 	return (u);
 }
