@@ -46,10 +46,11 @@ char	*_strdup(char *str)
 }
 
 /**
- * str_concat - concatenates two strings
+ * string_nconcat - concatenates two strings
  *
  * @s1: the first string
  * @s2: the second string
+ * @n: number of byte allowed
  *
  * Return: a pointer to the new string, or NULL on failure
  */
