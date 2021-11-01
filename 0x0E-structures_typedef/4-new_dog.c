@@ -56,9 +56,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	ownerlenght = _strlen(owner);
 
 	p = malloc(sizeof(dog_t));
+	if (p == NULL)
+		return (NULL);
 
 	p->name = malloc((sizeof(char) * namelenght + 1));
 	p->owner = malloc((sizeof(char) * ownerlenght + 1));
+
+	if (p->name == NULL || p->owner == NULL)
+		return (NULL);
 
 	p->name = _strcpy(p->name, name);
 	p->owner = _strcpy(p->owner, owner);
@@ -66,3 +71,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	return (p);
 }
+
+
+/**
+Maintenant, tu dois faires des conditions if au cas où les malloc ne réussissent pas.*/
