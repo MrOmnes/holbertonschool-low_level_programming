@@ -71,7 +71,3 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	return (p);
 }
-
-
-/**
-Maintenant, tu dois faires des conditions if au cas où les malloc ne réussissent pas.*/
