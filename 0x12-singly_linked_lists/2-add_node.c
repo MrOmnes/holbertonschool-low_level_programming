@@ -32,12 +32,12 @@ list_t *add_node(list_t **head, const char *str)
 */
 int _strlen(const char *s)
 {
-	if (*s == '\0')
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		return (0);
+
 	}
-	else
-	{
-		return (_strlen(++s));
-	}
+
+	return (i);
 }
