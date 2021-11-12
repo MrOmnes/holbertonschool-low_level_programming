@@ -38,6 +38,6 @@ int _strlen(const char *s)
 	}
 	else
 	{
-		return (1 + _strlen(++s));
+		return (_strlen(++s));
 	}
 }
