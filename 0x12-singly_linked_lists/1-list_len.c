@@ -16,13 +16,6 @@ size_t list_len(const list_t *h)
 
 	for (i = 0; tmp != NULL; i++)
 	{
-
-		str = tmp->str;
-
-		if (str == NULL)
-		{
-			str = "(nil)";
-		}
 		tmp = tmp->next;
 	}
 
