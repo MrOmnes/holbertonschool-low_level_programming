@@ -21,11 +21,9 @@ size_t print_list(const list_t *h)
 			str = "(nil)";
 			len = 0;
 		}
-		else
-		{
-			str = h->str;
-			len = h->len;
-		}
+
+		str = h->str;
+        len = h->len;
 
 		printf("[%u] %s\n", len, str);
 		h = h->next;
