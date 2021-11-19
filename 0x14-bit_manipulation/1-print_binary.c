@@ -18,8 +18,8 @@ void print_binary(unsigned long int n)
 
 	for (i = 0; n > 0; i++)
 	{
-		s[i] = n % 2;
-		n = n / 2;
+		s[i] = n & 1;
+		n = n >> 1;
 	}
 	for (i = i - 1; i >= 0; i--)
 		_putchar(s[i] + 48);
