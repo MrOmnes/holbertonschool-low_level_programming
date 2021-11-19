@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* flip _bits - Count how many flip to have the same int
+* flip_bits - Count how many flip to have the same int
 *
 *@n: Int 1
 *@m: Int 2
