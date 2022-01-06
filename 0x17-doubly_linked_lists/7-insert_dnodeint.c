@@ -1,6 +1,31 @@
 #include "lists.h"
 
 /**
+* dlistint_len - Check the size of a list
+*
+*@h: List to check
+*Return:  len of the list
+*/
+size_t dlistint_len(const dlistint_t *h)
+{
+	int number_of_node = 0;
+
+	if (h == NULL)
+	{
+		return (0);
+	}
+
+	while (h != NULL)
+	{
+		number_of_node++;
+		h = h->next;
+	}
+
+	return (number_of_node);
+}
+
+
+/**
 *insert_dnodeint_at_index - Insert node at the given index
 *
 *@h: head of the index
@@ -15,6 +40,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *newNode = malloc(sizeof(dlistint_t));
 
 	if (h == NULL)
+		return (NULL);
+
+	if (dlistint_len(h) < idx)
 		return (NULL);
 
 	if (newNode == NULL)
